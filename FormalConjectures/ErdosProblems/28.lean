@@ -40,6 +40,15 @@ theorem erdos_28 (A : Set ℕ) (h : (A + A)ᶜ.Finite) :
     limsup (fun (n : ℕ) => (sumRep A n : ℕ∞)) atTop = (⊤ : ℕ∞) := by
   sorry
 
--- TODO(firsching): add the theorems/conjectures for the comments on the page
+/--
+Li–Zhang, Theorem 1:
+If the upper density of the exceptional set is less than 7/32,
+then the ordered representation function has limsup greater than 5.
+-/
+@[category research solved, AMS 11]
+theorem li_zhang_theorem_1 (A : Set ℕ) (hA : 0 ∉ A) :
+    ((A + A)ᶜ).upperDensity < (7 / 32 : ℝ) →
+      5 < limsup (fun n : ℕ => (sumRep A n : ℕ∞)) atTop := by
+  sorry
 
 end Erdos28
